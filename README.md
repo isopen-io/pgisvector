@@ -1,6 +1,6 @@
 **Description**  
 This [Docker Image](https://hub.docker.com/r/isopen/pgisvector) extends the official [PostGIS 17-3.5](https://hub.docker.com/r/postgis/postgis) base with the [pgvector](https://github.com/pgvector/pgvector) extension compiled from source. It provides a ready-to-use PostgreSQL 17 environment featuring PostGIS for geospatial queries and pgvector for vector operations—suitable for production deployments that require both spatial and embedding-based functionality.
-[Docker Image](https://hub.docker.com/r/isopen/pgisvector)
+
 ---
 
 **Key Features**  
