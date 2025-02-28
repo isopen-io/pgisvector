@@ -1,6 +1,6 @@
 **Description**  
-This image extends the official [PostGIS 17-3.5](https://hub.docker.com/r/postgis/postgis) base with the [pgvector](https://github.com/pgvector/pgvector) extension compiled from source. It provides a ready-to-use PostgreSQL 17 environment featuring PostGIS for geospatial queries and pgvector for vector operations—suitable for production deployments that require both spatial and embedding-based functionality.
-
+This [Docker Image](https://hub.docker.com/r/isopen/pgisvector) extends the official [PostGIS 17-3.5](https://hub.docker.com/r/postgis/postgis) base with the [pgvector](https://github.com/pgvector/pgvector) extension compiled from source. It provides a ready-to-use PostgreSQL 17 environment featuring PostGIS for geospatial queries and pgvector for vector operations—suitable for production deployments that require both spatial and embedding-based functionality.
+[Docker Image](https://hub.docker.com/r/isopen/pgisvector)
 ---
 
 **Key Features**  
@@ -21,7 +21,7 @@ This image extends the official [PostGIS 17-3.5](https://hub.docker.com/r/postgi
 
 **Usage**  
 
-1. **Pull and Run**  
+1. **Pull and Run [isopen/pgisvector:latest](https://hub.docker.com/r/isopen/pgisvector)**  
    ```bash
    docker pull <YOUR_REPO>/pgisvector:latest
    docker run -d \
@@ -36,7 +36,7 @@ This image extends the official [PostGIS 17-3.5](https://hub.docker.com/r/postgi
    Inside the running container (or via psql from elsewhere) to ensure everything is going well:
    ```sql
    CREATE EXTENSION IF NOT EXISTS postgis;
-  CREATE EXTENSION IF NOT EXISTS vector;
+   CREATE EXTENSION IF NOT EXISTS vector;
    ```
 
 3. **Check Health**  
@@ -49,7 +49,7 @@ This image extends the official [PostGIS 17-3.5](https://hub.docker.com/r/postgi
 version: '3.8'
 services:
   pgvector_db:
-    image: <YOUR_REPO>/pgisvector:latest
+    image: isopen/pgisvector:latest
     container_name: my_pgvector_db
     environment:
       - POSTGRES_PASSWORD=secret
@@ -81,4 +81,6 @@ services:
 **License & Sources**  
 - [PostGIS/PostgreSQL License](https://www.postgresql.org/about/licence/)  
 - [pgvector License (MIT)](https://github.com/pgvector/pgvector/blob/main/LICENSE)
+- [Docker Image](https://hub.docker.com/r/isopen/pgisvector)
+- [Github Repos](https://github.com/isopen-io/pgisvector)
 - This is open
